@@ -1,18 +1,20 @@
-<button type="button" (click)="sendForm()"
-    class="mt-7 mb-7 shadow-md shadow-white focus:outline-none text-black bg-[#67DB58] hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-lg px-5 py-2.5 me-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-    {{ buttonText }}
-</button>
+<div class="flex justify-center">
+    <button type="button" (click)="sendForm()"
+        class="mt-6 mb-2 w-full sm:w-auto shadow-md shadow-black/30 focus:outline-none focus-visible:ring-4 focus-visible:ring-green-300 text-black bg-[#67DB58] hover:bg-[#57c247] active:scale-95 transition-all duration-200 font-semibold rounded-lg text-base sm:text-lg px-6 py-2.5 disabled:opacity-60"
+        [disabled]="buttonText !== 'Enviar'">
+        {{ buttonText }}
+    </button>
+</div>
 
-<div *ngIf="togglePopup" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-    <div class="bg-white rounded-lg p-5 shadow-lg w-96">
-      <h2 class="text-lg font-bold mb-4">¡Formulario enviado!</h2>
-      <p class="mb-4">Muchas gracias por contactarse<br>
-        conmigo. ¡Pronto le llegará una<br>
-        respuesta!
-      </p>
-      <button (click)="closePopup()" 
-          class="text-black bg-[#67DB58] px-4 py-2 rounded-lg">
-          Volver
-      </button>
+<div *ngIf="togglePopup" class="fixed inset-0 z-30 bg-black/60 flex justify-center items-center px-4">
+    <div class="bg-white rounded-xl p-6 shadow-2xl w-full max-w-sm">
+        <h2 class="text-lg font-bold mb-3 text-gray-900">¡Formulario enviado!</h2>
+        <p class="mb-5 text-gray-700 text-sm sm:text-base leading-relaxed">
+            Muchas gracias por contactarse conmigo. ¡Pronto le llegará una respuesta!
+        </p>
+        <button (click)="closePopup()"
+            class="w-full text-black bg-[#67DB58] hover:bg-[#57c247] transition-colors px-4 py-2.5 rounded-lg font-medium">
+            Volver
+        </button>
     </div>
-  </div>
+</div>

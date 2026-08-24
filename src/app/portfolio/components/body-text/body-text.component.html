@@ -1,45 +1,62 @@
-<div class="flex flex-col justify-center items-center h-full pb-20">
+<div class="w-full pt-8 pb-4 sm:pt-10 text-white">
     <!-- Biografía con posición actual -->
-    <p class="text-white text-left font-light">
-    Estudiante de <span class="text-[#FFD900]">ingeniería cívil en computación</span><br>
-    <span class="text-[#FFD900]">e informática</span> en Antofagasta, Chile. Enfocado <br>
-    en el <span class="text-[#FFD900]">desarrollo de aplicaciones web</span> y <br>
-    <span class="text-[#FFD900]">automatización de procesos.</span><br>
-    Motivado por las ganas de <span class="text-[#FFD900]">aprender</span> y aplicar <br>
-    nuevos conceptos de la informática, junto con <br>
-    realizar <span class="text-[#FFD900]">trabajos y estudios</span> de manera <br>
-    <span class="text-[#FFD900]">autodidacta</span>.<br><br>
-    <!-- Habilidades técnicas -->
-    <span class="text-2xl">Habilidades técnicas:</span><br><br>
-    <span class="text-[#FFD900]">• Desarrollo</span> en el lenguaje <span class="text-[#FFD900]">Java</span> en campos tales<br>
-    como el <span class="text-[#FFD900]">Frontend</span>, o el desarrollo de soluciones<br>
-    informáticas <br> <br>
-    <span class="text-[#FFD900]">• Creación</span> de proyectos de <span class="text-[#FFD900]">API REST</span> mediante el<br>
-    framework de <span class="text-[#FFD900]">ASP .NET CORE</span> en el lenguaje de <span class="text-[#FFD900]">C#</span><br><br>
-    <span class="text-[#FFD900]">• Analisis, procesamiento y visualización de datos</span><br>
-    con el uso de librerias como pandas, selenium,<br>
-    matplotlib y sqlalchemy en <span class="text-[#FFD900]">Python</span> usando<br>
-    <span class="text-[#FFD900]">Anaconda</span>; Y manejando el uso de <span class="text-[#FFD900]">PowerBi</span>.<br><br>
-    <span class="text-[#FFD900]">• Creación</span> de videojuegos en las plataformas de<br>
-    <span class="text-[#FFD900]">escritorio y móvil</span>, con el uso del motor gráfico<br>
-    de <span class="text-[#FFD900]">Unity</span> <br> <br>
-    <span class="text-[#FFD900]">• Uso</span> de <span class="text-[#FFD900]">C++</span> a nivel intermedio<br><br>
-    <!-- Habilidades blandas -->
-    <span class="text-2xl">Habilidades blandas:</span><br><br>
-    <span class="text-[#FFD900]">• Colaborador</span> <br>
-    <span class="text-[#FFD900]">• Amistoso</span> <br>
-    <span class="text-[#FFD900]">• Serio</span> <br>
-    <span class="text-[#FFD900]">• Flexible</span> <br>
-    <span class="text-[#FFD900]">• Empatico</span> <br><br>
-    <!-- Proyectos destacados -->
-    <span class="text-2xl">Proyectos destacados:</span><br><br>
-    <span class="text-[#FFD900]">• Primer lugar</span> en la asignatura <a href="https://github.com/AlbertoLyons/PII_DigitalDreamTeam.git" class="text-[#51B8EC] underline">Proy introducción <br>
-    a la ingeniería II</a>. Trabajando como Líder<br>
-    programador, coordinando en la etapa conceptual<br>
-    y lógica usando Unity <br> <br>
-    • Participación en <a href="https://github.com/Katapentakill/HackaDiscBackendDefinitivo" class="text-[#51B8EC] underline">HackaDisc 2023</a> como <br>
-    <span class="text-[#FFD900]">desarrollador backend</span> realizando desarrollo de <br>
-    una <span class="text-[#FFD900]">API REST con JavaScript</span> utilizando el <br>
-    Framework <span class="text-[#FFD900]">Express</span>
+    <p class="text-sm sm:text-base leading-relaxed font-light">
+        Estudiante de <span class="text-[#FFD900] font-medium">ingeniería civil en computación e informática</span>
+        en Antofagasta, Chile. Enfocado en el
+        <span class="text-[#FFD900] font-medium">desarrollo de aplicaciones web</span> y
+        <span class="text-[#FFD900] font-medium">automatización de procesos</span>.
+        Motivado por las ganas de <span class="text-[#FFD900] font-medium">aprender</span> y aplicar nuevos
+        conceptos de la informática, junto con realizar
+        <span class="text-[#FFD900] font-medium">trabajos y estudios</span> de manera
+        <span class="text-[#FFD900] font-medium">autodidacta</span>.
     </p>
+
+    <!-- Habilidades técnicas -->
+    <section class="mt-8 sm:mt-10">
+        <h2 class="text-xl sm:text-2xl font-bold border-l-4 border-[#67DB58] pl-3 mb-4">Habilidades técnicas</h2>
+        <ul class="space-y-3">
+            <li *ngFor="let habilidad of habilidadesTecnicas"
+                class="flex gap-3 text-sm sm:text-base leading-relaxed font-light">
+                <span class="text-[#FFD900] shrink-0">▹</span>
+                <span>{{ habilidad }}</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Habilidades blandas -->
+    <section class="mt-8 sm:mt-10">
+        <h2 class="text-xl sm:text-2xl font-bold border-l-4 border-[#67DB58] pl-3 mb-4">Habilidades blandas</h2>
+        <div class="flex flex-wrap gap-2 sm:gap-3">
+            <span *ngFor="let habilidad of habilidadesBlandas"
+                class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/5 border border-[#67DB58]/40 text-[#67DB58] text-xs sm:text-sm font-medium">
+                {{ habilidad }}
+            </span>
+        </div>
+    </section>
+
+    <!-- Proyectos destacados -->
+    <section class="mt-8 sm:mt-10">
+        <h2 class="text-xl sm:text-2xl font-bold border-l-4 border-[#67DB58] pl-3 mb-4">Proyectos destacados</h2>
+        <div class="grid gap-4 sm:grid-cols-2">
+            <a *ngFor="let proyecto of proyectos" [href]="proyecto.enlace" target="_blank" rel="noopener"
+                class="flex flex-col rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 p-4 sm:p-5 transition-colors duration-200 sm:odd:last:col-span-2 sm:odd:last:max-w-md sm:odd:last:justify-self-center sm:odd:last:w-full">
+                
+                <!-- Contenido superior (Título + Descripción) -->
+                <div>
+                    <p class="text-[#51B8EC] font-semibold underline underline-offset-2 text-sm sm:text-base">
+                        {{ proyecto.titulo }}
+                    </p>
+                    <p class="whitespace-pre-line mt-2 text-xs sm:text-sm font-light text-white/90 leading-relaxed">
+                        {{ proyecto.descripcion }}
+                    </p>
+                </div>
+                
+                <!-- Contenedor flex-1: Ocupa todo el espacio restante y centra la imagen al medio -->
+                <div class="mt-4 flex-1 flex items-center justify-center">
+                    <img class=" object-cover rounded-lg" [src]="proyecto.imagen" [alt]="proyecto.titulo">
+                </div>
+                
+            </a>
+        </div>
+    </section>
 </div>
