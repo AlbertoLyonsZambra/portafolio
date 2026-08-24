@@ -18,6 +18,7 @@ export class BodyTextComponent {
   habilidadesTecnicas: string[] = [
     'Desarrollo en el lenguaje Java en campos tales como el Frontend, o el desarrollo de soluciones informáticas.',
     'Desarrollo de plataformas Frontend en Angular y NextJS',
+    'Despliegue de servicios a través de la nube',
     'Implementación de servidores locales, que se conecte al internet y despliegue servicios a través de dominios, mediante una conexión segura',
     'Creación de proyectos de API REST mediante el framework de ASP .NET CORE en el lenguaje de C#; y FastAPI de Python',
     'Análisis, procesamiento y visualización de datos con el uso de librerías como pandas, selenium, matplotlib y sqlalchemy en Python usando Anaconda; y manejando el uso de PowerBI.',

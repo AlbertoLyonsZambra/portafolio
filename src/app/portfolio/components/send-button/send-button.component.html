@@ -1,5 +1,5 @@
 <div class="flex justify-center">
-    <button type="button" (click)="sendForm()"
+    <button type="button" (click)="sendForm($event)"
         class="mt-6 mb-2 w-full sm:w-auto shadow-md shadow-black/30 focus:outline-none focus-visible:ring-4 focus-visible:ring-green-300 text-black bg-[#67DB58] hover:bg-[#57c247] active:scale-95 transition-all duration-200 font-semibold rounded-lg text-base sm:text-lg px-6 py-2.5 disabled:opacity-60"
         [disabled]="buttonText !== 'Enviar'">
         {{ buttonText }}

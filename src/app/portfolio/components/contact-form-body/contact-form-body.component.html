@@ -3,14 +3,22 @@
     <div class="mt-8 sm:mt-10 space-y-6">
         <div>
             <label for="email" class="text-white text-sm sm:text-base font-medium block mb-2">Correo electrónico</label>
-            <input type="email" placeholder="Ingrese su correo" name="email" id="email" autocomplete="email" required
+            <input [(ngModel)]="email" (ngModelChange)="onInputChange()" type="email" placeholder="Ingrese su correo" name="email" id="email" autocomplete="email" required
                 class="block w-full rounded-md bg-[#D9D9D9] px-3 py-2 text-sm sm:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-black/60 focus:outline-2 focus:-outline-offset-2 focus:outline-[#67DB58] transition-shadow">
         </div>
         <div>
             <label for="description" class="text-white text-sm sm:text-base font-medium block mb-2">Descripción</label>
-            <textarea id="description" name="description"
-                placeholder="Ingrese una breve descripción sobre su interés por contactarse" required rows="6"
-                class="block w-full rounded-md bg-[#D9D9D9] px-4 py-2 text-sm sm:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-black/60 focus:outline-2 focus:-outline-offset-2 focus:outline-[#67DB58] transition-shadow"></textarea>
+            <textarea 
+            [(ngModel)]="description" 
+            (ngModelChange)="onInputChange()" 
+            id="description" 
+            name="description"
+            autocomplete="off"
+            required
+            rows="6"
+            placeholder="Ingrese una breve descripción sobre su interés por contactarse"
+            class="block w-full rounded-md bg-[#D9D9D9] px-4 py-2 text-sm sm:text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-black/60 focus:outline-2 focus:-outline-offset-2 focus:outline-[#67DB58] transition-shadow">
+            </textarea>
         </div>
         <portfolio-send-button></portfolio-send-button>
     </div>
